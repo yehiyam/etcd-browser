@@ -109,6 +109,10 @@ app.controller('NodeCtrl', ['$scope','$http','$cookies', function($scope,$http,$
     error(errorHandler);
   }
 
+  $scope.refresh = function(node){
+    $scope.loadNode(node)
+  }
+
   $scope.createDir = function(node){
     var dirName = prompt("Enter Directory Name", "");
     if(!dirName || dirName == "") return;
